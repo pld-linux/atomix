@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://triq.net/~jens/download/%{name}-%{version}.tar.gz
 # Source0-md5:	9c2c63ab1a3ea4c7b0246e1629aa9f4e
+Patch0:		%{name}-desktop.patch
 URL:		http://triq.net/~jens/atomix.php
 Buildrequires:	autoconf
 BuildRequires:	automake
@@ -32,6 +33,7 @@ oryginalna wersja na Amigê.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 glib-gettextize --copy --force
