@@ -9,10 +9,10 @@ Source0:	http://triq.net/~jens/download/%{name}-%{version}.tar.gz
 # Source0-md5:	dd0d5d29020863d8140f919edd96d150
 Patch0:		%{name}-desktop.patch
 URL:		http://triq.net/~jens/atomix.php
-Buildrequires:	autoconf
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	intltool
-Buildrequires:	libglade2-devel >= 2.0.1
+BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libxml2-devel >= 2.4.23
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
