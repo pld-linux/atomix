@@ -1,0 +1,11 @@
+diff -urN aaa/atomix-1.0/atomix.desktop.in atomix-1.0/atomix.desktop.in
+--- aaa/atomix-1.0/atomix.desktop.in	2002-12-05 20:38:39.000000000 +0100
++++ atomix-1.0/atomix.desktop.in	2003-12-12 16:33:39.000000000 +0100
+@@ -5,5 +5,5 @@
+ Icon=
+ Terminal=false
+ Type=Application
+-Categories=Application;Game;MindGame
+-
++Categories=Application;Game;LogicGame;
++Encoding=UTF-8
