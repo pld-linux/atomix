@@ -7,5 +7,5 @@ diff -urN aaa/atomix-1.0/atomix.desktop.in atomix-1.0/atomix.desktop.in
  Type=Application
 -Categories=Application;Game;MindGame
 -
-+Categories=Application;Game;LogicGame;
++Categories=GTK;GNOME;Game;LogicGame;
 +Encoding=UTF-8
