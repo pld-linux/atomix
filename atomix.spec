@@ -2,7 +2,7 @@ Summary:	Little game where you have to build molecules out of single atoms
 Summary(pl):	Ma³a gra w której trzeba budowaæ cz±steczki z pojedynczych atomów
 Name:		atomix
 Version:	1.0.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://triq.net/~jens/download/%{name}-%{version}.tar.gz
@@ -34,6 +34,9 @@ oryginalna wersja na Amigê.
 %prep
 %setup -q
 %patch0 -p1
+
+# Note: it is also for desktop translation
+mv -f po/{no,nb}.po
 
 %build
 glib-gettextize --copy --force
