@@ -11,10 +11,12 @@ Patch0:		%{name}-desktop.patch
 URL:		http://triq.net/~jens/atomix.php
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libxml2-devel >= 2.4.23
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
