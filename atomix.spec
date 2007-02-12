@@ -1,5 +1,5 @@
 Summary:	Little game where you have to build molecules out of single atoms
-Summary(pl.UTF-8):   Mała gra w której trzeba budować cząsteczki z pojedynczych atomów
+Summary(pl.UTF-8):	Mała gra w której trzeba budować cząsteczki z pojedynczych atomów
 Name:		atomix
 Version:	1.0.1
 Release:	3
