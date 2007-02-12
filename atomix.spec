@@ -1,5 +1,5 @@
 Summary:	Little game where you have to build molecules out of single atoms
-Summary(pl):	Ma³a gra w której trzeba budowaæ cz±steczki z pojedynczych atomów
+Summary(pl.UTF-8):   MaÅ‚a gra w ktÃ³rej trzeba budowaÄ‡ czÄ…steczki z pojedynczych atomÃ³w
 Name:		atomix
 Version:	1.0.1
 Release:	3
@@ -26,12 +26,12 @@ on the playfield. Once you have pushed an atom in one direction it
 moves until it hits an obstacle or another atom. The game is inspired
 by the original Amiga version.
 
-%description -l pl
-Atomix jest ma³± gr±, w której trzeba budowaæ cz±steczki z
-pojedynczych atomów, le¿±cych dooko³a na planszy. Gdy atom zostanie
-popchniêty, porusza siê w zadanym kierunku a¿ do momentu uderzenia w
-inny atom lub przeszkodê. Inspiracj± do powstania tej gry by³a
-oryginalna wersja na Amigê.
+%description -l pl.UTF-8
+Atomix jest maÅ‚Ä… grÄ…, w ktÃ³rej trzeba budowaÄ‡ czÄ…steczki z
+pojedynczych atomÃ³w, leÅ¼Ä…cych dookoÅ‚a na planszy. Gdy atom zostanie
+popchniÄ™ty, porusza siÄ™ w zadanym kierunku aÅ¼ do momentu uderzenia w
+inny atom lub przeszkodÄ™. InspiracjÄ… do powstania tej gry byÅ‚a
+oryginalna wersja na AmigÄ™.
 
 %prep
 %setup -q
