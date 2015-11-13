@@ -1,22 +1,25 @@
 Summary:	Little game where you have to build molecules out of single atoms
-Summary(pl.UTF-8):	Mała gra w której trzeba budować cząsteczki z pojedynczych atomów
+Summary(pl.UTF-8):	Mała gra, w której trzeba budować cząsteczki z pojedynczych atomów
 Name:		atomix
-Version:	1.0.1
-Release:	3
-License:	GPL
+Version:	3.18.0
+Release:	1
+License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://triq.net/~jens/download/%{name}-%{version}.tar.gz
-# Source0-md5:	dd0d5d29020863d8140f919edd96d150
-Patch0:		%{name}-desktop.patch
-URL:		http://triq.net/~jens/atomix.php
-BuildRequires:	autoconf
-BuildRequires:	automake
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/atomix/3.18/%{name}-%{version}.tar.xz
+# Source0-md5:	88a16c3e9460c4267f48c5460453562e
+URL:		https://wiki.gnome.org/Apps/Atomix
+BuildRequires:	appstream-glib-devel
+BuildRequires:	autoconf >= 2.63
+BuildRequires:	automake >= 1:1.10
+BuildRequires:	gdk-pixbuf2-devel >= 2.0.5
 BuildRequires:	gettext-tools
-BuildRequires:	intltool
-BuildRequires:	libglade2-devel >= 2.0.1
-BuildRequires:	libgnomeui-devel >= 2.4.0
-BuildRequires:	libxml2-devel >= 2.4.23
+BuildRequires:	glib2-devel >= 1:2.36.0
+BuildRequires:	gnome-common
+BuildRequires:	gtk+3-devel >= 3.10.0
+BuildRequires:	intltool >= 0.40.0
 BuildRequires:	pkgconfig
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,18 +38,15 @@ oryginalna wersja na Amigę.
 
 %prep
 %setup -q
-%patch0 -p1
-
-# Note: it is also for desktop translation
-mv -f po/{no,nb}.po
 
 %build
-glib-gettextize --copy --force
-intltoolize --copy --force
-%{__aclocal}
+%{__intltoolize}
+%{__aclocal} -I m4
 %{__autoconf}
+%{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--disable-silent-rules
 %{__make}
 
 %install
@@ -62,9 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
-%{_desktopdir}/*.desktop
-%{_datadir}/gnome-2.0/ui/*.xml
-%{_localstatedir}/games/%{name}.scores
+%doc AUTHORS ChangeLog NEWS README
+%attr(755,root,root) %{_bindir}/atomix
+%{_datadir}/appdata/atomix.appdata.xml
+%{_datadir}/atomix
+%{_desktopdir}/atomix.desktop
+%{_pixmapsdir}/atomix-icon.png
