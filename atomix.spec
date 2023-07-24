@@ -1,12 +1,12 @@
 Summary:	Little game where you have to build molecules out of single atoms
 Summary(pl.UTF-8):	Mała gra, w której trzeba budować cząsteczki z pojedynczych atomów
 Name:		atomix
-Version:	3.34.0
+Version:	44.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/atomix/3.34/%{name}-%{version}.tar.xz
-# Source0-md5:	080777a9ab03ad91b6d23455a624b670
+Source0:	https://download.gnome.org/sources/atomix/44/%{name}-%{version}.tar.xz
+# Source0-md5:	448892592ab039fcff4ce90336f50a06
 URL:		https://wiki.gnome.org/Apps/Atomix
 BuildRequires:	gdk-pixbuf2-devel >= 2.0.5
 BuildRequires:	gettext-tools
@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog MAINTAINERS NEWS README
+%doc AUTHORS ChangeLog MAINTAINERS NEWS README.md
 %attr(755,root,root) %{_bindir}/atomix
 %{_datadir}/atomix
 %{_datadir}/metainfo/atomix.appdata.xml
